@@ -1,0 +1,29 @@
+<div class="admin-orders">
+    <h1>📋 لیست سفارشات</h1>
+    <div id="orders-list"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const ordersList = document.getElementById('orders-list');
+        
+        orders.forEach(order => {
+            const orderElement = document.createElement('div');
+            orderElement.className = 'order-card';
+            orderElement.innerHTML = `
+                <h3>سفارش #${orders.indexOf(order) + 1}</h3>
+                <p>نام مشتری: ${order.customer.name}</p>
+                <p>تلفن: ${order.customer.phone}</p>
+                <p>تاریخ: ${order.date}</p>
+                <div class="order-items">
+                    ${order.items.map(item => `
+                        <div>${item.name} - ${item.price.toLocaleString()} تومان</div>
+                    `).join('')}
+                </div>
+                <p>وضعیت: ${order.status}</p>
+            `;
+            ordersList.appendChild(orderElement);
+        });
+    });
+</script>

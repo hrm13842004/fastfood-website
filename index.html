@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فست فود آنلاین</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>فست فود آنلاین</h1>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>منوی غذاها</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="برگر ویژه">
+                    <h3>برگر ویژه</h3>
+                    <p>برگر گوشت با پنیر چدار، کاهو و سس مخصوص</p>
+                    <div class="item-footer">
+                        <span class="price">45,000 تومان</span>
+                        <button class="add-to-cart" data-id="1" data-name="برگر ویژه" data-price="45000">افزودن به سبد</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="پیتزا پپرونی">
+                    <h3>پیتزا پپرونی</h3>
+                    <p>پیتزا با پپرونی، پنیر موزارلا و سس گوجه</p>
+                    <div class="item-footer">
+                        <span class="price">65,000 تومان</span>
+                        <button class="add-to-cart" data-id="2" data-name="پیتزا پپرونی" data-price="65000">افزودن به سبد</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="سیب زمینی سرخ کرده">
+                    <h3>سیب زمینی سرخ کرده</h3>
+                    <p>سیب زمینی سرخ کرده ترد با سس مخصوص</p>
+                    <div class="item-footer">
+                        <span class="price">25,000 تومان</span>
+                        <button class="add-to-cart" data-id="3" data-name="سیب زمینی سرخ کرده" data-price="25000">افزودن به سبد</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="نوشابه">
+                    <h3>نوشابه</h3>
+                    <p>نوشابه گازدار 330 میلی لیتری</p>
+                    <div class="item-footer">
+                        <span class="price">15,000 تومان</span>
+                        <button class="add-to-cart" data-id="4" data-name="نوشابه" data-price="15000">افزودن به سبد</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h3>سبد خرید شما</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- آیتم های سبد خرید اینجا نمایش داده می‌شوند -->
+            </div>
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span class="total-price">0 تومان</span>
+            </div>
+            <button class="checkout-btn">تکمیل سفارش</button>
+        </aside>
+    </main>
+
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<header>
+    <h1>فست فود آنلاین</h1>
+    <a href="orders.html" class="cart-link">
+        🛒 سبد خرید (<span id="cart-count">0</span>)
+    </a>
+</header>

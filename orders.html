@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ثبت سفارش | فست فود آنلاین</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="order-container">
+        <h1>🛒 سبد خرید شما</h1>
+        
+        <div id="cart-items">
+            <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
+        </div>
+        
+        <form id="order-form">
+            <h2>اطلاعات تحویل</h2>
+            <input type="text" id="name" placeholder="نام کامل" required>
+            <input type="tel" id="phone" placeholder="شماره تماس" required>
+            <textarea id="address" placeholder="آدرس دقیق"></textarea>
+            <button type="submit">تکمیل سفارش</button>
+        </form>
+    </div>
+
+    <script src="orders.js"></script>
+</body>
+</html>
