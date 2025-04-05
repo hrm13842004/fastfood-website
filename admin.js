@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('add-item-form');
     const itemsList = document.getElementById('menu-items-list');
 
-    // بارگذاری آیتم‌های موجود از localStorage
+   
     let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
 
-    // نمایش آیتم‌های موجود
+   
     function renderItems() {
         itemsList.innerHTML = '';
         menuItems.forEach((item, index) => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // افزودن آیتم جدید
+  
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 
-    // حذف آیتم
+ 
     window.deleteItem = (index) => {
         menuItems.splice(index, 1);
         localStorage.setItem('menuItems', JSON.stringify(menuItems));
