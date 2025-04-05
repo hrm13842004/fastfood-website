@@ -1,10 +1,9 @@
-// مدیریت سبد خرید
+
 document.addEventListener('DOMContentLoaded', () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-items');
     const orderForm = document.getElementById('order-form');
     
-    // نمایش آیتم‌های سبد خرید
     function renderCart() {
         cartContainer.innerHTML = '';
         let total = 0;
@@ -23,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
             total += item.price;
         });
         
-        // نمایش جمع کل
+       
         const totalElement = document.createElement('div');
         totalElement.className = 'cart-total';
         totalElement.innerHTML = `<strong>جمع کل: ${total.toLocaleString()} تومان</strong>`;
         cartContainer.appendChild(totalElement);
     }
     
-    // ثبت سفارش
+    
     orderForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             status: 'در انتظار پرداخت'
         };
         
-        // ذخیره در localStorage (موقت)
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         orders.push(order);
         localStorage.setItem('orders', JSON.stringify(orders));
